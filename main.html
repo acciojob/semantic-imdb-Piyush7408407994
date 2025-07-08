@@ -1,98 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Interstellar - Movie Webpage</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #0d0d0d;
-      color: white;
-      margin: 0;
-      padding: 0;
-    }
-    header, nav, section, aside, footer {
-      padding: 20px;
-      margin: 10px;
-      border-radius: 8px;
-    }
-    header {
-      background-color: #1a1a1a;
-      text-align: center;
-      font-size: 2em;
-    }
-    nav {
-      background-color: #262626;
-      text-align: center;
-    }
-    nav a {
-      color: #00ccff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      background-color: #1f1f1f;
-    }
-    aside {
-      background-color: #333333;
-    }
-    footer {
-      background-color: #1a1a1a;
-      text-align: center;
-      font-style: italic;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interstellar - Movie Page</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font for better aesthetics */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* Dark blue-gray background */
+            color: #e2e8f0; /* Light gray text */
+            line-height: 1.6;
+        }
+        /* Ensure anchors scroll smoothly */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-white py-6 px-4 md:px-8 rounded-b-lg shadow-lg">
+        <div class="container mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">Interstellar</h1>
+            <p class="mt-2 text-lg md:text-xl text-gray-400">A Journey Beyond Our Understanding</p>
+        </div>
+    </header>
 
-  <header>
-    Interstellar
-  </header>
+    <!-- Navigation Section -->
+    <nav class="bg-gray-800 py-3 px-4 md:px-8 shadow-md rounded-lg mx-4 md:mx-auto mt-4 max-w-4xl">
+        <ul class="flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-8">
+            <li>
+                <a id="nav-actor" href="#actor" class="text-blue-300 hover:text-blue-100 transition duration-300 text-lg font-medium py-1 px-3 rounded-md hover:bg-blue-700">Actors</a>
+            </li>
+            <li>
+                <a id="nav-quote" href="#quote" class="text-blue-300 hover:text-blue-100 transition duration-300 text-lg font-medium py-1 px-3 rounded-md hover:bg-blue-700">Favorite Quote</a>
+            </li>
+        </ul>
+    </nav>
 
-  <nav>
-    <a href="#nav-actor" id="nav-actor">Actors</a>
-    <a href="#nav-quote" id="nav-quote">Quotes</a>
-  </nav>
+    <main class="flex-grow container mx-auto px-4 py-8">
+        <!-- Summary Section -->
+        <section class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-4">Plot Summary</h2>
+            <p class="text-lg text-gray-300 leading-relaxed">
+                In a dystopian future, Earth is slowly becoming uninhabitable due to a global blight. Humanity's last hope rests on a team of astronauts who travel through a wormhole near Saturn in search of a new habitable planet. Led by former NASA pilot Joseph Cooper, they embark on an extraordinary interstellar voyage, grappling with the vastness of space, the complexities of time dilation, and the profound sacrifices required to save humankind. The film explores themes of love, time, survival, and the human spirit's relentless drive to explore and endure.
+            </p>
+        </section>
 
-  <section>
-    <h2>Summary</h2>
-    <p>
-      Interstellar is a science fiction epic that follows a group of astronauts who travel through a wormhole near Saturn
-      in search of a new home for humanity as Earth faces ecological collapse. The story blends emotional human drama with
-      mind-bending scientific concepts, exploring themes of love, time, and survival.
-    </p>
-  </section>
+        <!-- Actors Section -->
+        <section id="actor" class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-4">Key Actors</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-lg text-gray-300">
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <p><span class="font-semibold text-white">Matthew McConaughey</span> as Joseph Cooper</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <p><span class="font-semibold text-white">Anne Hathaway</span> as Dr. Amelia Brand</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <p><span class="font-semibold text-white">Jessica Chastain</span> as Murph Cooper</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <p><span class="font-semibold text-white">Michael Caine</span> as Professor Brand</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <p><span class="font-semibold text-white">Mackenzie Foy</span> as Young Murph</p>
+                </div>
+                <div class="bg-gray-700 p-4 rounded-lg shadow-md">
+                    <p><span class="font-semibold text-white">Matt Damon</span> as Dr. Mann</p>
+                </div>
+            </div>
+        </section>
 
-  <section id="nav-actor">
-    <h2>Actors</h2>
-    <ul>
-      <li>Matthew McConaughey as Cooper</li>
-      <li>Anne Hathaway as Dr. Amelia Brand</li>
-      <li>Jessica Chastain as Murphy Cooper</li>
-      <li>Michael Caine as Professor Brand</li>
-    </ul>
-  </section>
+        <!-- Quote Section -->
+        <section id="quote" class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-4">Favorite Quote</h2>
+            <blockquote class="text-xl md:text-2xl italic text-gray-200 border-l-4 border-blue-500 pl-4 py-2">
+                <p>"Mankind was born on Earth. It was never meant to die here."</p>
+                <footer class="mt-2 text-lg text-gray-400">— Dr. Amelia Brand</footer>
+            </blockquote>
+            <p class="mt-4 text-gray-300">
+                This quote encapsulates the core theme of humanity's drive for survival and exploration, even in the face of insurmountable odds.
+            </p>
+        </section>
 
-  <section id="nav-quote">
-    <h2>Favorite Quote</h2>
-    <blockquote>
-      “Love is the one thing that transcends time and space.”
-    </blockquote>
-  </section>
+        <!-- Aside Section -->
+        <aside class="bg-gray-800 p-6 md:p-8 rounded-xl shadow-lg mb-8">
+            <h2 class="text-3xl md:text-4xl font-bold text-blue-400 mb-4">Movie Details</h2>
+            <ul class="text-lg text-gray-300 space-y-2">
+                <li><span class="font-semibold text-white">IMDb Rating:</span> 8.7/10 (as of my last update)</li>
+                <li><span class="font-semibold text-white">Release Date:</span> November 7, 2014</li>
+                <li><span class="font-semibold text-white">Genre:</span> Sci-Fi, Drama, Adventure</li>
+                <li><span class="font-semibold text-white">Director:</span> Christopher Nolan</li>
+            </ul>
+            <p class="mt-4 text-gray-300">
+                Interstellar has received critical acclaim for its scientific accuracy, visual effects, and emotional depth.
+            </p>
+        </aside>
+    </main>
 
-  <aside>
-    <h3>Movie Details</h3>
-    <p><strong>IMDb Rating:</strong> 8.6/10</p>
-    <p><strong>Release Date:</strong> November 7, 2014</p>
-  </aside>
-
-  <footer>
-    Produced by: Christopher Nolan
-  </footer>
-
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-400 py-4 px-4 md:px-8 text-center rounded-t-lg shadow-lg mt-auto">
+        <p class="text-sm md:text-base">Produced by: Emma Thomas & Christopher Nolan</p>
+        <p class="text-xs mt-1">&copy; 2025 Interstellar Fan Page. All rights reserved.</p>
+    </footer>
 </body>
 </html>
